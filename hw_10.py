@@ -43,9 +43,9 @@ class Record:
             else:
                 print(f'This phone - {old_phone} is not in list')
 
-    def remuve_phone(self, old_phone):
+    def remove_phone(self, old_phone):
         for ph in self.phones:
-            if ph == old_phone:
+            if ph.value == old_phone:
                 self.phones.remove(ph)
             else:
                 print(f"This phone {old_phone} is exist in list")
@@ -57,9 +57,3 @@ if __name__ == '__main__':
     rec = Record(name, phone)
     address_book = AddressBook()
     address_book.add_record(rec)
-
-    print(address_book['Sem'], Record)
-    print(address_book['Sem'].name, Name)
-    # assert isinstance(address_book['Sem'].phones, list)
-    # assert isinstance(address_book['Sem'].phones[0], Phone)
-    # assert address_book['Sem'].phones[0].value == '111'
